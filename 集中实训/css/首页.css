@@ -1,0 +1,421 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+html,body{
+	width: 100%;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/*居中*/
+div{
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.logo{
+	float: left;
+}
+/*导航盒子*/
+#dao{
+	height: 65px;
+	background-color: #393e46;
+	text-align: center;
+}
+/*导航*/
+.a{
+	width: 1200px;
+	margin: 0 auto;
+}
+.a li a{
+	color: white;
+}
+.a li{
+	width: 85px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	float: left;
+	font-size: 20px;
+}
+/*鼠标悬停*/
+.a li:hover a{
+	color: darkseagreen;
+}
+.right{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+/*登录*/
+.dl{
+	float: right;
+	text-decoration: none ;
+	font-size: 20px;
+	line-height: 60px;
+	margin-right: 20px;
+}
+.more{
+	width: 140px;
+	float: right;
+	text-decoration: none ;
+	font-size: 20px;
+	line-height: 60px;
+	position: relative;
+	display: inline-block;
+}
+.more:hover>a{
+	color: darkseagreen;
+}
+.moo:hover a{
+	color: darkseagreen;
+}
+/*下拉内容-默认隐藏*/
+.mo{
+	display: none;
+	position: absolute;
+	min-width: 100px;
+	text-align: center;
+	background-color:#393e46;
+	padding-left: 25px;
+	padding-right: 10px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 99;
+}
+.mo li a{
+	color: white;
+}
+.more:hover .mo{
+	display: block;
+}
+.dl a{
+	color: white;
+}
+.more a{
+	color: white;
+}
+.dl:hover a{
+	color: darkseagreen;
+}
+
+/*搜索框*/
+.sou{
+	float: right;
+}
+#myBtn{
+	background-color: lightgrey;
+	border-radius: 25px;
+	height: 50px;
+	width: 50px;
+	position:fixed;
+	bottom: -600px;		/*定位元素下外边距边界与其包含块下边界之间的偏移*/
+	right: -1200px;			/*位置*/
+	border: none;
+	outline: none;
+	color: whitesmoke;
+	cursor: pointer;
+	text-align: center;
+	font-size: 20px;
+	line-height: 45px;
+}
+#myBtn:hover{
+	background-color: grey;
+}
+/*底部个人信息版权信息等*/
+.name{
+	width: 100%;
+	background: grey;
+	height: 100px;
+	text-align: center;
+	padding-top: 70px;
+}
+/*banner区域*/
+.banbig{
+	display: flex;
+	justify-content: center;
+	box-sizing: border-box;
+	align-items: center;	
+	vertical-align: middle;
+}
+/*整体大小banner设置*/
+/*垂直居中水平分布*/
+.ban{
+	width:1400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.p{
+	height:300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/*轮播图大小*/
+.ph{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 640px;
+	position: absolute;
+	overflow: hidden;
+	z-index: 0;
+	transition: all 0.45s ease-in-out;
+}
+/*图片拉满宽度,高度自适应*/
+.ph > img{
+	width: 100%;
+	display: block;			/*该元素生成一个块级元素盒，在正常的流中，该元素之前和之后产生换行*/
+	border-radius: 16px;	/*	圆角值,弧度*/
+}
+.ph.center{
+	width: 850px;
+	z-index: 2;		/*优先级-中间轮播图最高,在最上方*/
+}
+/*各自左右偏移*/
+.ph.left{
+	transform: translateX(-200px);
+	z-index: 1;
+}
+.ph.right{
+	z-index: 1;
+	transform: translateX(200px);
+}
+.menu{
+	width: 1000px;
+	height: 50px;
+	position: absolute;
+	z-index: 2;
+}
+.menu > .btn{
+	cursor: pointer;
+	width: 50px;
+	height: 100%;
+	background-color:rgba(0,0,0,0.3);
+	border-radius: 50%;
+}
+.btn.pre{
+	position: absolute;
+	left: 0;
+}
+.btn.next{
+	position: absolute;
+	right: 0;
+}
+.btn > img{
+	width: 100%;
+	height: 100%;
+}
+
+/*年度推荐——字*/
+/*bot标题*/
+.bot{
+	text-align: center;
+	width: 100%;
+	height: 50px;
+	/*background-color: ghostwhite;*/	
+	padding-top: 10px;
+}
+.bot .line{
+	display: inline-block;			 /*允许在元素上设置宽度和高度，将保留上下外边距/内边距,元素之后不添加换行符*/
+	border-top: 1px solid black;
+	width: 250px;
+}
+.bot .title{
+	color: black;
+	font-size: 25px;
+	vertical-align: -10px;
+	font-family: "宋体";
+}
+/*年度推荐者*/
+.container{
+	position: relative;
+	width: 900px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;		/*定义浏览器如何沿着弹性容器的主轴和网格容器的行向轴分配内容元素之间和周围的空间*/
+	font-size: 16px;
+	margin-top: 15px;
+}
+.container .box{
+	position: relative;
+	width: 200px;
+	height: 360px;
+	margin: 0 0 10px 0;
+	box-sizing: border-box;
+	overflow: hidden;
+	border-radius: 8px;
+}
+.container .box .imgbx{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	clip-path: circle(400px at center 100px);
+	transition: 0.4s;
+	transition-delay: 0.4s;
+}
+.container .box:hover .imgbx{
+	clip-path: circle(80px at center 100px);			/*使用裁剪方式创建元素的可显示区域*/
+	transition-delay: 0s;
+}
+.container .box:hover .imgbx img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+}
+.container .box .content{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1%;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+}
+.container .box .content h3{
+	padding: 0;
+	margin: 0;
+}
+/*限定范围后，鼠标未移动上去时透明度为0，hover后变为1，显示*/
+.container .box .content  a{
+	text-decoration: none;
+	background: indianred;
+	color: #fff;
+	padding: 4px;
+	margin-top: 9px;
+	display: inline-block;
+}
+.container .box .content h3,
+.container .box .content p,
+.container .box .content a{
+	opacity: 0;
+	transition:0.5s;
+	transform: translateY(20px);
+	margin-top:5px;
+}
+/**/
+.container .box:hover .content h3{
+	opacity: 1;
+	transform: translateY(0px);
+	transition-delay: 0.4s;
+}
+.container .box:hover .content p{
+	opacity: 1;
+	transform: translateY(0px);
+	transition-delay: 0.7s;
+}
+.container .box:hover .content a{
+	opacity: 1;
+	transform: translateY(0px);
+	transition-delay: 0.9s;
+}
+.content > a{
+	border-radius: 3px;
+}
+/*热门内容——瀑布*/
+.con{
+	width: 900px;
+	margin: 10px auto;
+	columns: 4;			/*设置四列*/
+	column-gap: 40px;		/*设置元素列之间的间隔大小*/
+	margin-top: 0;
+}
+.con .bo{
+	width: 100%;
+	margin: 0 0 20px;
+	padding: 10px;
+	background: whitesmoke;
+	overflow: hidden;
+	break-inside: avoid;
+	border-radius: 6px;
+}
+.con .bo img{
+	max-width: 100%;
+}
+.con .bo h3{
+	margin: 10px 0 0;
+	padding: 0;
+	font-size: 20px;
+}
+.con .bo p{
+	margin: 0;
+	padding: 0 0 10px;
+	font-size: 16px;
+}
+/*指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档*/
+@media (max-width:900px) {
+	.con{
+		columns: 3;
+		width: calc(100% - 40px);
+		box-sizing: border-box;
+		padding: 20px 20px 20px 0;
+	}
+}
+@media (max-width:700px) {
+	.con{
+		columns: 2;
+	}
+}
+@media (max-width: 450px) {
+	.con{
+		columns: 1;
+	}
+}
+/*悬浮文字*/
+.b{
+	position: relative;
+	display: inline-block;
+}
+.over{
+	position: absolute;
+	bottom: 0;
+	width: 90%;
+	height: 90%;
+	padding: 20px 10px 20px 10px;
+	padding-bottom: 10px;
+	text-align: left;
+	font-family: "宋体";
+	/*设置背景+透明*/
+	background: #000000;
+	color: white;
+	opacity: 0; 
+	border-radius: 3px;
+}
+.b:hover > .over{
+		opacity: 0.5;
+		transition: 1.5s;
+}
+.bo:hover{
+	transform: scale(1.05);
+}
+/*more标题*/
+.hot{
+	width: 1200px;
+	height: 50px;
+	background-color:white;
+	margin: 0px auto;
+	padding: 40px;
+	text-align: center;
+	font-size: 25px;
+	font-family: "宋体";
+}
+.hot:hover a{
+	color: dimgrey;
+}
